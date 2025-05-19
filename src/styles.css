@@ -1,1 +1,256 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    gap: 0;
+    font-family: Open Sans;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    letter-spacing: 0px;
+}
+
+.navbar li {
+    float: none;
+}
+
+.navbar a {
+    color: hsl(0, 0%, 63%);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: right;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: hsl(16, 88%, 64%);
+}
+
+.auth-container {
+  max-width: 350px;
+  margin: 60px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 32px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.auth-container form {
+  width: 100%;
+  margin: 0 auto;
+}
+.auth-container form > div {
+  margin-bottom: 18px;
+}
+.auth-container input[type="text"],
+.auth-container input[type="password"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.2s;
+}
+.auth-container input[type="text"]:focus,
+.auth-container input[type="password"]:focus {
+  border: 1.5px solid hsl(198, 100%, 44%);
+}
+.auth-container button {
+  width: 100%;
+  padding: 10px 0;
+  background: hsl(161, 33%, 58%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.auth-container button:hover {
+  background: hsl(161, 33%, 48%);
+}
+.auth-container .google-btn {
+  width: 100%;
+  padding: 10px 0;
+  background: #fff;
+  color: #222;
+  border: 1.5px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.auth-container .google-btn:hover {
+  background: #f5f5f5;
+  border-color: hsl(161, 33%, 58%);
+}
+.auth-error {
+  color: #b91c1c;
+  background: #fee2e2;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 18px;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+}
+
+.post-container {
+  max-width: 500px;
+  margin: 32px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 24px 24px 18px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.post-meta {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+.post-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  word-break: break-word;
+}
+.post-body {
+  font-size: 17px;
+  color: #222;
+  word-break: break-word;
+  white-space: pre-line;
+}
+
+.welcome-message {
+  text-align: center;
+  color: #111;
+  font-size: 20px;
+  margin: 24px 0 0 0;
+  font-weight: 600;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: 18px 0 10px 0;
+}
+.divider span {
+  padding: 0 12px;
+  color: #888;
+  font-size: 15px;
+  font-weight: 600;
+  background: #fff;
+  z-index: 1;
+}
+.divider:before,
+.divider:after {
+  content: '';
+  flex: 1;
+  border-bottom: 1.5px solid #e0e0e0;
+  margin-bottom: 2px;
+}
+
+.visual-landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+  background: linear-gradient(135deg, hsl(161, 33%, 92%) 0%, hsl(161, 33%, 80%) 100%);
+  border-radius: 18px;
+  margin: 40px auto 0 auto;
+  max-width: 500px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  padding: 24px 24px 24px 24px;
+}
+.visual-landing-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.visual-landing-desc {
+  font-size: 1.15rem;
+  color: #444;
+  text-align: center;
+  max-width: 375px;
+}
+
+.add-post-modal {
+  max-width: 500px;
+  margin: 32px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  padding: 24px 24px 18px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.add-post-modal form {
+  width: 100%;
+  margin: 0 auto;
+}
+.add-post-modal form > div {
+  margin-bottom: 18px;
+}
+.add-post-modal input[type="text"],
+.add-post-modal textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.2s;
+}
+.add-post-modal input[type="text"]:focus,
+.add-post-modal textarea:focus {
+  border: 1.5px solid hsl(198, 100%, 44%);
+}
+.add-post-modal button {
+  width: 100%;
+  padding: 10px 0;
+  background: hsl(161, 33%, 58%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.add-post-modal button:hover {
+  background: hsl(161, 33%, 48%);
+}
